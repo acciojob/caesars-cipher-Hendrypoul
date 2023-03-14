@@ -1,15 +1,17 @@
 function rot13(str) {
-	const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-	var decodedArr = [];
-	for(var i = 0; i < str.length; i++) {
-		var newArr = abc.indexOf(str[i]) + 13;
-	if(abc.indexOf(str[i]) == -1) {
-		decodeArr.push(str[i]);
-	}
-	else {
-		decodeArr.push(abc[newArr]);
-	}
-	}
-	return decodeArr.join("");
+
+    str = str.split("")
+    
+    str = str.map(function(char){
+        var charCode = char.charCodeAt(0);
+        if(charCode >=65 && charCode <=90){
+            charCode = ((charCode-65+13)%26)+65;
+        }
+        
+        return String.fromCharCode(charCode);
+    })
+    str = str.join("");
+    return str;
+    
 }
 rot13("SERR PBQR PNZC")
