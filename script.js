@@ -14,4 +14,4 @@ function rot13(str) {
     return str;
     
 }
-rot13("SERR PBQR PNZC")
+console.log(rot13("SERR PBQR PNZC"))
