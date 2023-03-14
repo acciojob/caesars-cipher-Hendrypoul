@@ -1,4 +1,4 @@
-function rot13(str) {
+function ROT13(str) {
 
     str = str.split("")
     
@@ -14,4 +14,4 @@ function rot13(str) {
     return str;
     
 }
-console.log(rot13("SERR PBQR PNZC"))
+console.log(ROT13("SERR PBQR PNZC"))
